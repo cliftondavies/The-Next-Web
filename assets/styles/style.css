@@ -1,0 +1,119 @@
+/* General */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fff;
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.hide {
+  display: none;
+  /* position: absolute;
+  top: -9999px;
+  left: -9999px; */
+}
+
+.header > a {
+  position: absolute;
+}
+
+/* Header */
+.header-links {
+  padding: 6px 22px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  background: #131313;
+}
+
+.header-links ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-links ul:first-of-type {
+  width: 400px;
+}
+
+.header-links ul:first-of-type li:first-child {
+  color: #fff;
+}
+
+.header-links ul:last-of-type {
+  width: 250px;
+}
+
+.header-links a:hover {
+  color: #fff;
+}
+
+.header-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav ul {
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.header-nav li a {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+}
+
+.header-nav li:first-child a {
+  padding-left: 20px;
+}
+
+.header-nav div {
+  display: flex;
+}
+
+.header-nav div a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding-top: 15px;
+  border-left: .1px solid #d3d3d3;
+  text-align: center;
+}
+
+.header-nav div a:last-child {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 20px;
+  color: #f42;
+}
+
+.header-nav a:hover {
+  color: #000;
+}
+
+.header-nav div a:last-child:hover {
+  color:  #f42;
+}
