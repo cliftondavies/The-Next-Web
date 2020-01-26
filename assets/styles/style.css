@@ -309,3 +309,14 @@ strong {
 .news span {
   font-size: 13px;
 }
+
+/* Funding */
+.funding div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.funding h2 + ul {
+  display: flex;
+  font-size: 16px;
+}
