@@ -22,6 +22,7 @@ strong {
   font-weight: 700;
 }
 
+/* Misc */
 .hide {
   display: none;
   /* position: absolute;
@@ -29,12 +30,12 @@ strong {
   left: -9999px; */
 }
 
-.header > a {
+.logo {
   position: absolute;
 }
 
-/* Header */
-.header-links {
+/* Top */
+.top {
   padding: 6px 22px;
   display: flex;
   justify-content: space-between;
@@ -42,57 +43,60 @@ strong {
   background: #131313;
 }
 
-.header-links ul {
+.top ul {
   display: flex;
   justify-content: space-between;
 }
 
-.header-links ul:first-of-type {
+.top ul:first-of-type {
   width: 400px;
 }
 
-.header-links ul:first-of-type li:first-child {
+.top ul:first-of-type li:first-child {
   color: #fff;
 }
 
-.header-links ul:last-of-type {
+.top ul:last-of-type {
   width: 250px;
 }
 
-.header-links a:hover {
+.top a:hover {
   color: #fff;
 }
 
-.header-nav {
-  position: -webkit-sticky;
+/* Navigation */
+.nav {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 999;
+  background: #fff;
+  box-shadow: 0 1px 1px 1px #f4f4f4;
 }
 
-.header-nav ul {
+.nav ul {
   display: flex;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: .5px;
 }
 
-.header-nav li a {
+.nav li a {
   display: block;
   width: 100%;
   padding: 15px 10px;
 }
 
-.header-nav li:first-child a {
+.nav li:first-child a {
   padding-left: 20px;
 }
 
-.header-nav div {
+.nav div {
   display: flex;
 }
 
-.header-nav div a {
+.nav div a {
   display: block;
   width: 48px;
   height: 48px;
@@ -101,7 +105,7 @@ strong {
   text-align: center;
 }
 
-.header-nav div a:last-child {
+.nav div a:last-child {
   display: none;
 }
 
@@ -110,10 +114,88 @@ strong {
   color: #f42;
 }
 
-.header-nav a:hover {
+.nav a:hover {
   color: #000;
 }
 
-.header-nav div a:last-child:hover {
+.nav div a:last-child:hover {
   color:  #f42;
+}
+
+/* Featured */
+.featured {
+  display: grid;
+  max-height: 500px;
+  padding: 8px;
+  color: #fff;
+  box-shadow: 2px 5px 5px #d3d3d3 inset;
+  grid-gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "feature-1 feature-1 feature-2"
+    "feature-1 feature-1 feature-3"
+}
+
+.featured > img,
+.featured > span {
+  position: absolute;
+}
+
+.featured-first {
+  position: relative;
+  grid-area: feature-1;
+  height: 450px;
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-...-2-796x417.png") no-repeat;
+  background-size: cover;
+}
+
+.featured-first span:first-of-type {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right bottom, #f42 60%, #000);
+  z-index: 99;
+  opacity: 0.85;
+  transition: opacity .5s ease;
+}
+
+.featured-first span:first-of-type:hover {
+  opacity: 0.8;
+}
+
+.featured-second {
+  position: relative;
+  grid-area: feature-2;
+  /* max-height: 265px; */
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Chrome-PiP-796x418.jpg") no-repeat;
+}
+
+.featured-third {
+  position: relative;
+  grid-area: feature-3;
+  /* max-height: 265px; */
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Snag_2267466a-796x445.png") no-repeat;
+}
+
+.featured-second span:first-of-type,
+.feature-third span:first-of-type {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 99;
+  opacity: 0.7;
+  transition: opacity .5s ease;
+}
+
+.featured-second span:first-of-type:hover,
+.feature-third span:first-of-type:hover {
+  opacity: 0.6;
 }
