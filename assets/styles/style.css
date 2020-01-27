@@ -150,7 +150,9 @@ strong {
 
 .featured article {
   position: relative;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 8px 15px;
 }
 
 .featured-first {
@@ -174,7 +176,7 @@ strong {
   z-index: 100;
 }
 
-.featured article span:first-of-type {
+.featured article > span:first-of-type {
   display: block;
   position: absolute;
   top: 0;
@@ -185,59 +187,74 @@ strong {
   transition: opacity .5s ease;
 }
 
-.featured-first span:first-of-type {
+.featured-first > span:first-of-type {
   background: linear-gradient(to right bottom, #f42 60%, #000);
   opacity: 0.85;
 }
 
-.featured-first span:first-of-type:hover {
+.featured-first > span:first-of-type:hover {
   opacity: 0.8;
 }
 
-.featured-second span:first-of-type,
-.featured-third span:first-of-type {
+.featured-second > span:first-of-type,
+.featured-third > span:first-of-type {
   background: #000;
   opacity: 0.7;
 }
 
-.featured-second span:first-of-type:hover,
-.featured-third span:first-of-type:hover {
+.featured-second > span:first-of-type:hover,
+.featured-third > span:first-of-type:hover {
   opacity: 0.6;
 }
 
-.featured-first span:nth-of-type(2) {
+.featured-first > span:nth-of-type(2) {
   position: absolute;
   top: 15px;
   right: 20px;
   font-size: 15px;
-  z-index: 100;
+  /* z-index: 100; */
 }
 
 .featured article > a {
   position: relative;
   display: block;
   width: 100%;
-  height: 58%;
-  margin-bottom: 15px;
-  z-index: 99;
+  flex: 10;
+  /* height: 58%;
+  max-height: 58%; */
+  /* margin-bottom: 30px; */
+  /* z-index: 101; */
 }
 
-.featured .featured-second > a,
+/* .featured .featured-first > a {
+  flex: 10;
+} */
+
+/* .featured .featured-second > a,
 .featured .featured-third > a {
-  height: 38%;
-}
+  max-height: 38%;
+} */
 
 .featured img {
   position: absolute;
   top: 5px;
   left: 5px;
   width: 50%;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
-.featured-first span:nth-of-type(3),
-.featured-second span:nth-of-type(2),
-.featured-third span:nth-of-type(2) {
+.featured div {
+  /* margin-top: 5px; */
+  min-height: 92px;
+  flex: auto;
+}
+
+.featured-first div {
+  min-height: 150px;
+}
+
+.featured div span:first-of-type {
+  /* display: block; */
   font-size: 13px;
 }
 
@@ -249,18 +266,18 @@ strong {
 }
 
 .featured-first h3 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 41px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
-.featured article span:last-of-type {
+.featured div span:last-of-type {
   font-size: 12px;
   color: #a9a9a9;
 }
 
-/* Main Page */
-.main {
+/* Main Page Wrapper */
+.main-wrapper {
   max-width: 88%;
   margin: 0 auto;
   padding: 45px 8px;
@@ -311,12 +328,161 @@ strong {
 }
 
 /* Funding */
-.funding div:first-child {
-  display: flex;
-  justify-content: space-between;
+.funding {
+  margin-bottom: 50px;
 }
 
-.funding h2 + ul {
+.funding-links {
   display: flex;
+  justify-content: space-between;
+  padding: 0 10px 10px 10px;
+}
+
+.funding-links ul {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 6px;
   font-size: 16px;
+  color: #f42;
+}
+
+.funding-links li:first-child,
+.funding-links li:nth-of-type(2){
+  padding-right: 10px;
+}
+
+.funding-links li:nth-of-type(2),
+.funding-links li:last-child {
+  padding-left: 10px;
+  border-left: .5px solid #f42;
+}
+
+.funding-companies {
+  display: grid;
+  padding: 10px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.funding-companies article {
+  position: relative;
+}
+
+.funding-companies article > a {
+  display: block;
+  width: 100%;
+}
+
+.funding-companies img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.funding-companies h3 {
+  padding: 8px 0 8px 85px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #f42;
+  color: #fff;
+}
+
+.funding-companies div {
+  padding: 10px 0 10px 85px;
+  line-height: 1.1;
+  background: rgba(255,68,34,.08);
+}
+
+.funding-companies div span:first-child {
+  font-size: 16px;
+  font-weight: 900;
+  color: #000;
+}
+
+.funding-companies div span:last-child {
+  font-size: 11px;
+}
+
+.funding-companies ul,
+.funding-companies article > span {
+  display: block;
+  padding: 15px 0 7px 15px;
+  border-bottom: .25px solid rgba(255,68,34,.25);
+  font-size: 13px;
+  background: rgba(255,68,34,.03);
+  color: #555;
+}
+
+.funding-companies article > span {
+  padding-bottom: 12px;
+}
+
+.funding-companies li {
+  margin-bottom: 8px;
+}
+
+.funding-companies li a:hover {
+  color: #000;
+}
+
+.fa-tag,
+.fa-briefcase {
+  margin-right: 8px;
+  font-size: 15px;
+  color: #000;
+}
+
+.funding-companies p {
+  padding: 10px 15px 15px 15px;
+  font-size: 11.5px;
+  line-height: 1.6;
+  background: rgba(255,68,34,.03);
+  color: #555;
+}
+
+.funding-companies p span {
+  color: grey;
+}
+
+/* Topics Section  */
+.topics {
+  margin-bottom: 50px;
+  display: grid;
+  padding: 10px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.apps article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/08/Facebook-Birthday-Fundraisers-368x276.jpg") no-repeat;
+}
+
+.gear article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/01/IMG_0198-368x276.jpg") no-repeat;
+}
+
+.tech article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Copy-of-Copy-of-Copy-of-Copy-of-...-2-368x276.png") no-repeat;
+}
+
+.creative article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/GodfallTeaser04-368x276.png") no-repeat;
+}
+
+.podium article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Untitled-design44-368x276.png") no-repeat;
+}
+
+.insights article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/09/moonday-morning-368x276.png") no-repeat;
+}
+
+.launch article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/Amazon-Prime-Fresh-delivery-hed-368x276.jpg") no-repeat;
+}
+
+.distract article:first-of-type {
+  background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Snag_2267466a-368x276.png") no-repeat;
 }
