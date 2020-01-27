@@ -67,7 +67,7 @@ strong {
   color: #fff;
 }
 
-.top ul:last-of-type {
+.top ul:last-child {
   width: 250px;
 }
 
@@ -176,7 +176,7 @@ strong {
   z-index: 100;
 }
 
-.featured article > span:first-of-type {
+.featured article > span:first-child {
   display: block;
   position: absolute;
   top: 0;
@@ -187,23 +187,23 @@ strong {
   transition: opacity .5s ease;
 }
 
-.featured-first > span:first-of-type {
+.featured-first > span:first-child {
   background: linear-gradient(to right bottom, #f42 60%, #000);
   opacity: 0.85;
 }
 
-.featured-first > span:first-of-type:hover {
+.featured-first > span:first-child:hover {
   opacity: 0.8;
 }
 
-.featured-second > span:first-of-type,
-.featured-third > span:first-of-type {
+.featured-second > span:first-child,
+.featured-third > span:first-child {
   background: #000;
   opacity: 0.7;
 }
 
-.featured-second > span:first-of-type:hover,
-.featured-third > span:first-of-type:hover {
+.featured-second > span:first-child:hover,
+.featured-third > span:first-child:hover {
   opacity: 0.6;
 }
 
@@ -253,7 +253,7 @@ strong {
   min-height: 150px;
 }
 
-.featured div span:first-of-type {
+.featured div span:first-child {
   /* display: block; */
   font-size: 13px;
 }
@@ -271,7 +271,7 @@ strong {
   font-weight: 900;
 }
 
-.featured div span:last-of-type {
+.featured div span:last-child {
   font-size: 12px;
   color: #a9a9a9;
 }
@@ -325,6 +325,10 @@ strong {
 
 .news span {
   font-size: 13px;
+}
+
+.news span a:hover {
+  color: #000;
 }
 
 /* Funding */
@@ -455,6 +459,13 @@ strong {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
+.topics article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 8px 15px;
+  color: #fff;
+}
+
 .apps article:first-of-type {
   background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/08/Facebook-Birthday-Fundraisers-368x276.jpg") no-repeat;
 }
@@ -485,4 +496,35 @@ strong {
 
 .distract article:first-of-type {
   background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/Snag_2267466a-368x276.png") no-repeat;
+}
+
+.topics article:first-of-type {
+  background-size: cover;
+}
+
+.topics article > a:first-child {
+  display: block;
+  width: 100%;
+  flex: 10 138px;
+}
+
+.topics div {
+  min-height: 92px;
+  flex: auto;
+}
+
+.topics div span:first-child {
+  font-size: 13px;
+}
+
+.topics div h4 {
+  margin-bottom: 5px;
+  font-size: 20.5px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.topics div span:last-child {
+  font-size: 12px;
+  color: #a9a9a9;
 }
