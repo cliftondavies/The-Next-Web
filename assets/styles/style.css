@@ -42,7 +42,22 @@ strong {
 }
 
 .logo {
-  position: absolute;
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 106px;
+    height: 82.5px;
+    padding: 33px 20px 0 20px;
+    background-color: #f42;
+    background: linear-gradient(to bottom right,#c09,#f42 85%);
+    z-index: 999;
+  }
 }
 
 /* Top */
@@ -52,6 +67,12 @@ strong {
   justify-content: space-between;
   font-size: 13.5px;
   background: #131313;
+}
+
+@media screen and (max-width: 1023px) {
+  .top {
+    margin-left: 106px;
+  }
 }
 
 .top ul {
@@ -71,6 +92,12 @@ strong {
   width: 250px;
 }
 
+@media screen and (max-width: 811px) {
+  .top ul:last-child {
+    display: none;
+  }
+}
+
 .top a:hover {
   color: #fff;
 }
@@ -84,6 +111,12 @@ strong {
   z-index: 999;
   background: #fff;
   box-shadow: 0 1px 1px 1px #f4f4f4;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav {
+    margin-left: 106px;
+  }
 }
 
 .nav ul {
@@ -103,6 +136,12 @@ strong {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 1213px) {
+  .nav ul li:last-child {
+    display: none;
+  }
+}
+
 .nav div {
   display: flex;
 }
@@ -114,6 +153,12 @@ strong {
   padding-top: 15px;
   border-left: .1px solid #d3d3d3;
   text-align: center;
+}
+
+@media screen and (max-width: 811px) {
+  .nav div a:first-child {
+    display: none;
+  }
 }
 
 .nav div a:last-child {
@@ -215,6 +260,12 @@ strong {
   /* z-index: 100; */
 }
 
+@media screen and (max-width: 1023px) {
+  .featured-first > span:nth-of-type(2) {
+    display: none;
+  }
+}
+
 .featured article > a {
   position: relative;
   display: block;
@@ -241,6 +292,12 @@ strong {
   left: 5px;
   width: 50%;
   /* z-index: 1000; */
+}
+
+@media screen and (max-width: 1023px) {
+  .featured img {
+    display: none;
+  }
 }
 
 .featured div {
@@ -342,6 +399,13 @@ strong {
   padding: 0 10px 10px 10px;
 }
 
+@media screen and (max-width: 1023px) {
+  .funding-links {
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+}
+
 .funding-links ul {
   display: flex;
   align-items: flex-end;
@@ -369,11 +433,17 @@ strong {
   display: grid;
   padding: 10px;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .funding-companies article {
   position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  .funding article:last-child {
+    display: none;
+  }
 }
 
 .funding-companies article > a {
