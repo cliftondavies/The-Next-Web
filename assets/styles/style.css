@@ -590,7 +590,7 @@ strong {
 
 /* Deals section */
 .deals {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .deals div:first-child {
@@ -648,4 +648,83 @@ strong {
 .deals span:last-child {
   font-size: 16px;
   font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  background: #131313;
+}
+
+.footer-links {
+  max-width: 88%;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 0 20px;
+}
+
+.footer-links ul:first-of-type {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.footer-links ul:last-child {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.footer li {
+  margin-right: 15px;
+}
+
+.footer-links ul:first-of-type a {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  padding: 10px;
+  background: #333;
+  text-align: center;
+}
+
+.footer-links ul:first-of-type a:hover {
+  background: #000;
+}
+
+.footer-links ul:last-child a:hover {
+  color: #fff;
+}
+
+.footer-links .fab,
+.footer-links .fas,
+.footer-links .far {
+  font-size: 18px;
+  color: #fff;
+}
+
+.small-prints {
+  padding: 35px 0;
+  background: #000;
+}
+
+.small-prints div {
+  max-width: 88%;
+  margin: 0 auto;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.small-prints img {
+  width: 40px;
+}
+
+.small-prints span:last-child img {
+  width: 65px;
+}
+
+.heart {
+  color: #ff0000;
 }
