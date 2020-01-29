@@ -21,7 +21,7 @@ strong { font-weight: 700; }
 .section-heading {
   font-size: 25px;
   font-weight: 900;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   color: #f42;
 }
 
@@ -41,8 +41,8 @@ strong { font-weight: 700; }
     width: 106px;
     height: 82.5px;
     padding: 33px 20px 0 20px;
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
     background-color: #f42;
-    background: linear-gradient(to bottom right,#c09,#f42 85%);
     z-index: 999;
   }
 }
@@ -115,7 +115,7 @@ strong { font-weight: 700; }
   display: flex;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 767px) {
@@ -145,7 +145,7 @@ strong { font-weight: 700; }
   width: 48px;
   height: 48px;
   padding-top: 15px;
-  border-left: .1px solid #d3d3d3;
+  border-left: 0.1px solid #d3d3d3;
   text-align: center;
 }
 
@@ -178,7 +178,7 @@ strong { font-weight: 700; }
 
 .nav a:hover { color: #000; }
 
-.nav div a:last-child:hover { color:  #f42; }
+.nav div a:last-child:hover { color: #f42; }
 
 /* --------------Featured Section---------------- */
 .featured {
@@ -192,7 +192,7 @@ strong { font-weight: 700; }
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "feature-1 feature-1 feature-2"
-    "feature-1 feature-1 feature-3"
+    "feature-1 feature-1 feature-3";
 }
 
 @media screen and (max-width: 767px) {
@@ -203,7 +203,7 @@ strong { font-weight: 700; }
     grid-template-areas:
       "feature-1"
       "feature-2"
-      "feature-3"
+      "feature-3";
   }
 }
 
@@ -243,7 +243,7 @@ strong { font-weight: 700; }
   right: 0;
   bottom: 0;
   z-index: 99;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .featured-first > span:first-child {
@@ -378,7 +378,6 @@ strong { font-weight: 700; }
 
 .news h3:hover {
   text-decoration: underline;
-  text-decoration-thickness: 0.1px;
   color: #f42;
 }
 
@@ -435,14 +434,14 @@ strong { font-weight: 700; }
 }
 
 .funding-links li:first-child,
-.funding-links li:nth-of-type(2){
+.funding-links li:nth-of-type(2) {
   padding-right: 10px;
 }
 
 .funding-links li:nth-of-type(2),
 .funding-links li:last-child {
   padding-left: 10px;
-  border-left: .5px solid #f42;
+  border-left: 0.5px solid #f42;
 }
 
 @media screen and (max-width: 767px) {
@@ -511,7 +510,7 @@ strong { font-weight: 700; }
 .funding-companies div {
   padding: 10px 0 10px 85px;
   line-height: 1.1;
-  background: rgba(255,68,34,.08);
+  background: rgba(255, 68, 34, 0.08);
 }
 
 .funding-companies div span:first-child {
@@ -526,9 +525,9 @@ strong { font-weight: 700; }
 .funding-companies article > span {
   display: block;
   padding: 15px 0 7px 15px;
-  border-bottom: .25px solid rgba(255,68,34,.25);
+  border-bottom: 0.25px solid rgba(255, 68, 34, 0.25);
   font-size: 13px;
-  background: rgba(255,68,34,.03);
+  background: rgba(255, 68, 34, 0.03);
   color: #555;
 }
 
@@ -549,7 +548,7 @@ strong { font-weight: 700; }
   padding: 10px 15px 15px 15px;
   font-size: 11.5px;
   line-height: 1.6;
-  background: rgba(255,68,34,.03);
+  background: rgba(255, 68, 34, 0.03);
   color: #555;
 }
 
@@ -576,6 +575,7 @@ strong { font-weight: 700; }
   flex-direction: column;
   padding: 15px 15px 15px 15px;
   margin: 10px 0 2px 0;
+  background-size: cover;
   color: #fff;
 }
 
@@ -611,8 +611,6 @@ strong { font-weight: 700; }
   background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/g4s-bitocin-cryptocurrency-vault-bobkchain-storage-wallet-secure-gk8-480x270.png") no-repeat;
 }
 
-.topics article:first-of-type { background-size: cover; }
-
 .topics article > a:first-child {
   display: block;
   width: 100%;
@@ -620,7 +618,6 @@ strong { font-weight: 700; }
 }
 
 .topics div {
-  flex: 0 1 126px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -645,7 +642,7 @@ strong { font-weight: 700; }
 .topics article:nth-of-type(2) {
   padding-left: 12px;
   overflow: auto;
-  background: rgba(255,68,34,.07);
+  background: rgba(255, 68, 34, 0.07);
   color: #f42;
 }
 
@@ -729,7 +726,6 @@ strong { font-weight: 700; }
 
 .deals h3:hover {
   text-decoration: underline;
-  text-decoration-thickness: 0.1px;
   color: #f42;
 }
 
@@ -773,7 +769,7 @@ strong { font-weight: 700; }
   }
 }
 
-/* ------------Footer-------------- */
+/* ----------------Footer----------------- */
 .footer { background: #131313; }
 
 .footer-links {
@@ -855,4 +851,4 @@ strong { font-weight: 700; }
 
 .small-prints span:last-child img { width: 65px; }
 
-.heart { color: #ff0000; }
+.heart { color: #f00; }
