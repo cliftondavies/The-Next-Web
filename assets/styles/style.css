@@ -60,6 +60,13 @@ strong {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .logo {
+    height: 48px;
+    padding-top: 16px;
+  }
+}
+
 /* Top */
 .top {
   padding: 6px 22px;
@@ -72,6 +79,12 @@ strong {
 @media screen and (max-width: 1023px) {
   .top {
     margin-left: 106px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top {
+    display: none;
   }
 }
 
@@ -126,6 +139,12 @@ strong {
   letter-spacing: .5px;
 }
 
+@media screen and (max-width: 767px) {
+  .nav ul {
+    display: none;
+  }
+}
+
 .nav li a {
   display: block;
   width: 100%;
@@ -165,6 +184,20 @@ strong {
   display: none;
 }
 
+@media screen and (max-width: 767px) {
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .nav div a:first-child {
+    display: block;
+  }
+
+  .nav div a:last-child {
+    display: block;
+  }
+}
+
 .fa-bars {
   font-size: 20px;
   color: #f42;
@@ -191,6 +224,18 @@ strong {
   grid-template-areas:
     "feature-1 feature-1 feature-2"
     "feature-1 feature-1 feature-3"
+}
+
+@media screen and (max-width: 767px) {
+  .featured {
+    min-height: 700px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "feature-1"
+      "feature-2"
+      "feature-3"
+  }
 }
 
 .featured article {
@@ -310,6 +355,13 @@ strong {
   min-height: 150px;
 }
 
+@media screen and (max-width: 767px) {
+  .featured-first div {
+    min-height: 92px;
+    flex: auto;
+  }
+}
+
 .featured div span:first-child {
   /* display: block; */
   font-size: 13px;
@@ -328,14 +380,26 @@ strong {
   font-weight: 900;
 }
 
+@media screen and (max-width: 767px) {
+  .featured-first h3 {
+    margin-bottom: 5px;
+    font-size: 20.5px;
+    line-height: 1.2;
+  }
+}
+
 .featured div span:last-child {
   font-size: 12px;
   color: #a9a9a9;
 }
 
+.featured span:last-child a:hover {
+  color: #fff;
+}
+
 /* Main Page Wrapper */
 .main-wrapper {
-  max-width: 88%;
+  max-width: 1192px;
   margin: 0 auto;
   padding: 45px 8px;
 }
@@ -368,7 +432,7 @@ strong {
 
 .news h3 {
   margin-bottom: 3px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
   color: #000;
@@ -382,6 +446,30 @@ strong {
 
 .news span {
   font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+  .news div {
+    grid-gap: 17px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .news article > a {
+    width: 75px;
+    height: 75px;
+    float: left;
+  }
+
+  .news img {
+    height: 75px;
+  }
+
+  .news h3,
+  .news span {
+    display: block;
+    margin-left: 85px;
+  }
 }
 
 .news span a:hover {
@@ -425,6 +513,24 @@ strong {
   border-left: .5px solid #f42;
 }
 
+@media screen and (max-width: 767px) {
+  .funding-links ul {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+  }
+
+  .funding-links li {
+    margin-top: 10px;
+  }
+
+  .funding-links li:nth-of-type(2),
+  .funding-links li:last-child {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
 .funding-links li a:hover {
   color: #000;
 }
@@ -434,6 +540,13 @@ strong {
   padding: 10px;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media screen and (max-width: 767px) {
+  .funding-companies {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 .funding-companies article {
@@ -698,7 +811,7 @@ strong {
 
 .deals h3 {
   margin-bottom: 3px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
   color: #000;
@@ -720,13 +833,43 @@ strong {
   font-weight: 700;
 }
 
+@media screen and (max-width: 767px) {
+  .deals div:first-child > a {
+    font-size: 14px;
+  }
+
+  .deals div:last-child {
+    grid-gap: 17px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .deals article > a {
+    width: 75px;
+    height: 75px;
+    float: left;
+  }
+
+  .deals img {
+    height: 75px;
+  }
+
+  .deals h3 {
+    margin-left: 85px;
+  }
+
+  .deals span:first-of-type {
+    margin-left: 10px;
+  }
+}
+
 /* Footer */
 .footer {
   background: #131313;
 }
 
 .footer-links {
-  max-width: 88%;
+  max-width: 1192px;
   margin: 0 auto 30px auto;
   display: flex;
   flex-direction: column;
@@ -781,10 +924,16 @@ strong {
 }
 
 .small-prints div {
-  max-width: 88%;
+  max-width: 1192px;
   margin: 0 auto;
   font-size: 13.5px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer div > span {
+    display: block;
+  }
 }
 
 .small-prints img {
