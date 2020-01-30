@@ -570,15 +570,6 @@ strong { font-weight: 700; }
   }
 }
 
-.topics article:first-of-type {
-  display: flex;
-  flex-direction: column;
-  padding: 15px 15px 15px 15px;
-  margin: 10px 0 2px 0;
-  background-size: cover;
-  color: #fff;
-}
-
 .apps article:first-of-type {
   background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/robotbaby-368x276.jpg") no-repeat;
 }
@@ -609,6 +600,15 @@ strong { font-weight: 700; }
 
 .distract article:first-of-type {
   background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/g4s-bitocin-cryptocurrency-vault-bobkchain-storage-wallet-secure-gk8-480x270.png") no-repeat;
+}
+
+.topics article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 15px 15px;
+  margin: 10px 0 2px 0;
+  background-size: cover;
+  color: #fff;
 }
 
 .topics article > a:first-child {
