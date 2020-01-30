@@ -607,7 +607,7 @@ strong { font-weight: 700; }
   flex-direction: column;
   padding: 15px 15px 15px 15px;
   margin: 10px 0 2px 0;
-  background-size: cover;
+  background-size: 100% 100%;
   color: #fff;
 }
 
