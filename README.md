@@ -72,7 +72,7 @@ At **767px**, the margin between list items in the first set of links is reduced
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/cliftondavies/The-Next-Web/master/index.html)
+[Live Demo Link](https://cliftondavies.github.io/The-Next-Web/)
 
 ## Authors
 
