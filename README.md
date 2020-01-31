@@ -40,7 +40,7 @@ The Funding section consists of two main containers. One with a heading and a li
 
 The contents of the first container are aligned in a row using **Flexbox**. For the second container, `auto-fit` and `minmax` are also employed to create a responsive grid.
 
-As the screen resizes to **1023px** the contents of the first container adopt a column alignment, and the last article from the second container is removed. At **767px**, the list of links also adopt a column layout, as the second container becomes a three-row, one-column grid to accomodate the articles within it.
+As the screen resizes to **1023px** the contents of the first container adopt a column alignment, and the order of the links within the first container is reversed. The last article from the second container is also removed. At **767px**, the list of links adopt a column layout, as the second container becomes a three-row, one-column grid to accomodate the articles within it.
 
 #### Topics Section
 
@@ -62,7 +62,7 @@ There is only one layout change in this section. As with the News section, the a
 
 The Footer makes up the final part of the webpage. It is split up into two parts. One part with two sets of links, the other containing the webpage small prints. Both parts are assigned a width ceiling of **1192px**, and then centered. The links within the first container are positioned using **Flexbox**, with a `flex-wrap` property applied to ensure they wrap as the screen size shrinks. The small prints text are then aligned to the center of their container.
 
-At **767px**, the margin between list items in the first set of links is reduced, and the third list item is removed in the second set. Finally, the small prints are set to `display block` instead of `inline` so that they stack on top of each other as the screen gets smaller.
+At **767px**, the margin between list items in the first set of links is reduced, and the third list item is removed in the second set. The small prints are set to `display block` instead of `inline` so that they stack on top of each other as the screen gets smaller. The third list item in the second set appears again at **479px**. Finally, the sixth list item is removed from the first set as the page reaches **320px**.
 
 ## Technologies Used
 
@@ -72,7 +72,7 @@ At **767px**, the margin between list items in the first set of links is reduced
 
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/cliftondavies/The-Next-Web/feature/homepage/index.html)
+[Live Demo Link](https://raw.githack.com/cliftondavies/The-Next-Web/master/index.html)
 
 ## Authors
 
